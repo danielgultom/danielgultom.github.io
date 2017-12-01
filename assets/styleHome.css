@@ -1,0 +1,44 @@
+
+#links {
+	position: relative;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*for the SVG Daniel Gultom animation lol*/
+@keyframes stroke {
+	from {
+		stroke-dasharray: 400px;
+		stroke-dashoffset: 400px;
+	} to {
+		stroke-dasharray: 0px;
+		stroke-dashoffset: 0px;
+	}
+}
+
+#name {
+	border: 3px solid blue;
+	margin-left: 30%;
+
+	padding: 10px;
+	
+
+	/*stroke-dasharray: 400px;
+	stroke-dashoffset: 400px;
+	animation: stroke 4s ease-in 0s 1 forwards;*/
+}
+
+#svgItem {
+	/*left: 50%;*/
+	border: 3px solid green;
+	padding: 10px;
+	
+}
