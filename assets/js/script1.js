@@ -1,4 +1,3 @@
-$(document).ready(function() {
 var i = 0;
 var txt = "Hello there! My name is Daniel Gultom testing for new line";
 var tempTxt = "";
@@ -50,6 +49,9 @@ function blinkCursor() {
   setTimeout(blinkCursor, speedDone);
 
 }
+
+$(document).ready(function() {
+
  
 // jQuery Function Number 1 (click)
   $("#sidebar-button").click(function() {
