@@ -1,5 +1,5 @@
 var i = 0;
-var txt = "Hello there! My name is Daniel Gultom testing for new line";
+var txt = "Hello there! My name is Daniel Gultom and this is my personal website! It's currently under heavy construction, but I hope you will understand :) I have plans to make it look really nice soon!";
 var tempTxt = "";
 var speed = 70;
 var speedDone = 1000;
