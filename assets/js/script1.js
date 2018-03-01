@@ -109,6 +109,58 @@ $(document).ready(function() {
     }
   })
 
+  var i = 0;
+var txt = "Hello there! My name is Daniel Gultom \n testing for new line";
+var tempTxt = "";
+var speed = 70;
+var speedDone = 1000;
+var finished = false;
+var thereOrNot = false;
+function typeWriter() {
+  if (i < txt.length) {
+    tempTxt += txt.charAt(i);
+    document.getElementById("greeting").innerHTML = tempTxt + '<span class="blinker"></span>';
+
+    i++;
+    setTimeout(typeWriter, speed);
+    if (i >= txt.length) {
+      finished = true;
+    }
+    console.log("not finished");
+  } 
+  if (finished == true) {
+    blinkCursor();
+    console.log("supposedly finished? will go to blinkCursor");
+    // if (thereOrNot) {
+    //  document.getElementById("greeting").innerHTML = txt;
+    //  thereOrNot = false;
+    //  setTimeout(typeWriter, speedDone);
+    // } else {
+    //  document.getElementById("greeting").innerHTML = txt + "|";
+    //  thereOrNot = true;
+    //  setTimeout(typeWriter, speedDone);
+    // }
+    
+  }
+}
+
+function blinkCursor() {
+  if (thereOrNot) {
+    document.getElementById("greeting").style.borderRight = "solid red";
+    console.log("hello here");
+    // thereOrNot = false;
+    // setTimeout(blinkCursor, speedDone);
+  } else {
+    document.getElementById("greeting").style.borderRight = "";
+    console.log("hello there");
+    // thereOrNot = true;
+    // setTimeout(blinkCursor, speedDone);
+  }
+  thereOrNot = !thereOrNot;
+  setTimeout(blinkCursor, speedDone);
+
+}
+
 
 
 
