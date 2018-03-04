@@ -1,26 +1,30 @@
 body {
 	font-family: 'Raleway', sans-serif;
+	background-color: #C0C0C0;
 }
 
-#banner {
-	/*background-color: red;*/
-}
 .bannerElem{
-	background-color: #d9e8f7;
+	/*background-color: #d9e8f7;*/
 	display: inline-block;
-	width: 45%
+	width: 45%;
 
 }
 #hey {
-	font-size: 100px;
+	font-size: 200px;
 	text-align: right;
-	margin-left: 2.5%;
+	margin-left: 4%;
+	top: 0;
+}
+#intro {
+
 }
 #myName {
 	font-size: 75px;
+	display: block;
 }
 #daniel {
 	font-size: 75px;
+	display: block;
 }
 
 
