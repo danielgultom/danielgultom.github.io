@@ -1,10 +1,28 @@
 var i = 0;
+var j = 0;
 var txt = "Welcome to my personal website! It's currently under heavy construction, but I hope you'll understand :) I have plans to make it look really nice soon!";
+var name = "Daniel Gultom"
+var tempName = "";
 var tempTxt = "";
-var speed = 70;
+var speed = 100;
+var speedName = 200;
 var speedDone = 1000;
 var finished = false;
 var thereOrNot = false;
+function nameTyper() {
+  if (j < name.length) {
+    tempName += name.charAt(j);
+    document.getElementById("daniel").innerHTML = tempName;
+    j++;
+    setTimeout(nameTyper, speedName);
+    if (j >= txt.length) {
+      finished = true;
+    }
+  } else {
+    setTimeout(typeWriter, speed);
+    // console.log("banana");
+  }
+}
 function typeWriter() {
   if (i < txt.length) {
     tempTxt += txt.charAt(i);
