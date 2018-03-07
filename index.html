@@ -13,6 +13,7 @@
         <script src = "assets/js/script1.js"></script>
     </head>
     <body onload="nameTyper()">
+    <!-- <body onload="moveStars()"> -->
         <div id = "sidebar-button">
             <a id="nav-toggle">
                 <span></span>
@@ -29,32 +30,51 @@
 
 
         </nav>
-        <!-- <table id="banner">
-            <tr>
-                <th>
-                    <div class="bannerElem" id="hey">Hey!</div>
-                </th>
-                <th>
-                    <div id="myName">My name is</div>
-                    <div id="daniel">Daniel Gultom</div>
-                </th>
-            </tr>
-        </table> -->
-
-
         <!-- <div id = "banner"> -->
     	<div class="bannerElem" id="hey">Hey!</div>
     	<div class="bannerElem" id="intro">
     		<div id="myName">My name is</div>
     		<div id="daniel">Daniel Gultom</div>
     	</div>
-        <!-- </div> -->
 
-        <div class = "page-wrapper">
+        <div>
         	<div id="greeting">
 				<p id="greeting"></p>
 			</div>
-            
         </div>
+       <!--  <div class="testThing">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin iaculis sed urna sed porta. Nulla nibh elit, sagittis a ex ut, iaculis tristique neque. Nunc aliquam enim at lobortis lobortis. Suspendisse elit massa, vestibulum aliquam imperdiet quis, fringilla vel tellus. Duis augue nisl, tristique nec facilisis ac, finibus at leo. Curabitur euismod sed diam ut laoreet. Curabitur vehicula efficitur massa. Mauris nec lorem laoreet, tristique sem vel, vehicula sapien. Curabitur ultricies quis massa eget ornare. Mauris ullamcorper eget purus eu iaculis. Aenean eu dolor et erat rutrum congue a et purus. Vivamus posuere diam quis purus lacinia egestas.</p>
+            <p>
+            Donec pellentesque justo vel neque laoreet eleifend. Quisque gravida, quam at euismod hendrerit, nisi nisi gravida leo, eu lacinia nulla neque ut ipsum. Donec auctor, lorem id congue semper, sem augue dignissim dui, in eleifend ipsum mauris venenatis turpis. Sed pharetra neque eget eros placerat, gravida vehicula metus posuere. Maecenas fringilla interdum arcu, at aliquam velit faucibus sit amet. Sed auctor imperdiet mi sit amet lobortis. Nunc varius diam nisi, vel bibendum nunc cursus a. Aliquam rhoncus, mauris nec ultrices egestas, metus augue sagittis nisl, et vestibulum augue mauris vel neque. Etiam mollis magna quis risus pretium aliquet. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Maecenas lacus turpis, consequat vitae orci sed, placerat efficitur quam. Aenean semper eros a augue varius, vel lacinia risus iaculis.</p>
+        
+
+
+            <p>In non purus eros. Ut nec ipsum pulvinar, tincidunt tellus id, tincidunt nibh. Etiam fermentum blandit lobortis. Proin a turpis semper, tempor neque vitae, faucibus tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Quisque ut augue purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus accumsan porta sapien ac suscipit. Pellentesque fermentum in nibh vel tempor. In sit amet odio odio. Duis at scelerisque libero, vel mollis eros. Praesent pharetra massa purus, ut elementum mi lobortis molestie. Suspendisse mollis at augue nec iaculis. Aliquam vitae placerat orci.</p>
+        
+
+
+            <p>Nulla facilisi. In quis massa enim. Vivamus scelerisque vehicula lacus, et commodo magna tristique et. Cras non feugiat lacus. Nullam lorem dolor, lacinia sit amet felis vel, cursus mattis ex. Praesent at ipsum sed arcu pharetra blandit. Donec efficitur egestas porttitor. Mauris in tincidunt sapien. Donec vel viverra orci. Nulla commodo dictum efficitur. Pellentesque sit amet blandit sapien. Vestibulum in augue sed diam condimentum convallis. Morbi nisl nisi, facilisis et urna id, malesuada auctor lacus. Curabitur rhoncus ex molestie lectus pulvinar euismod. Nulla ac fringilla dui, vitae ornare massa.</p>
+        
+
+
+            <p>Aenean elit neque, euismod at mauris nec, ultrices faucibus justo. Vestibulum pretium ante et nulla aliquet, a rhoncus dui semper. Curabitur et consectetur nunc. Praesent blandit est urna, at mollis ante auctor nec. Cras maximus nisl fermentum diam volutpat, elementum congue neque elementum. Proin augue lectus, vestibulum a semper a, lobortis eu tellus. Integer eget commodo sem. Aenean tincidunt ornare ante, id pharetra dolor imperdiet vel. Morbi leo metus, rhoncus vitae tempus nec, facilisis sit amet metus.</p>
+        </div> -->
+        <div class="stars" id="star1" style="width:10px;height:10px;background-color: white; color: white; position: absolute; margin-left: 100px; top: 400px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 100px; top: 3500px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 620px; top: 150px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 300px; top: 100px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 400px; top: 300px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 780px; top: 216px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 200px; top: 200px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 1200px; top: 400px;"></div>
+
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 620px; top: 490px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 300px; top: 400px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 400px; top: 450px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 800px; top: 390px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 200px; top: 350px;"></div>
+        <div class="stars" style="width:10px;height:10px;background-color: white; color: white; position: absolute; left: 1200px; top: 400px;"></div>
+
+
     </body>
 </html>

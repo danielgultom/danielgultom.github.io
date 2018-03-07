@@ -1,53 +1,38 @@
-var i = 0;
+var tCount = 0;
 var j = 0;
 var txt = "Welcome to my personal website! It's currently under heavy construction, but I hope you'll understand :) I have plans to make it look really nice soon!";
 var name = "Daniel Gultom"
 var tempName = "";
 var tempTxt = "";
-var speed = 100;
-var speedName = 200;
-var speedDone = 1000;
+var speed = 10;
+var speedName = 100;
+var speedDone = 10;
 var finished = false;
 var thereOrNot = false;
+// var origStar = document.getElementById("star1").style.top;
+// var starLoc = document.getElementById("star1").style;
+
 function nameTyper() {
   if (j < name.length) {
     tempName += name.charAt(j);
-    document.getElementById("daniel").innerHTML = tempName;
+    document.getElementById("daniel").innerHTML = tempName + '<span class="noblink-cursor"></span>';
     j++;
     setTimeout(nameTyper, speedName);
-    if (j >= txt.length) {
-      finished = true;
-    }
   } else {
+    document.getElementById("daniel").innerHTML = tempName + '<span class="blinking-cursor"></span>';
     setTimeout(typeWriter, speed);
     // console.log("banana");
   }
 }
 function typeWriter() {
-  if (i < txt.length) {
-    tempTxt += txt.charAt(i);
-    document.getElementById("greeting").innerHTML = tempTxt + '<span class="blinker"></span>';
+  if (tCount < txt.length) {
+    tempTxt += txt.charAt(tCount);
+    document.getElementById("greeting").innerHTML = tempTxt + '<span class="noblink-cursor"></span>';
 
-    i++;
+    tCount++;
     setTimeout(typeWriter, speed);
-    if (i >= txt.length) {
-      finished = true;
-    }
-    console.log("not finished");
-  } 
-  if (finished == true) {
-    blinkCursor();
-    console.log("supposedly finished? will go to blinkCursor");
-    // if (thereOrNot) {
-    //  document.getElementById("greeting").innerHTML = txt;
-    //  thereOrNot = false;
-    //  setTimeout(typeWriter, speedDone);
-    // } else {
-    //  document.getElementById("greeting").innerHTML = txt + "|";
-    //  thereOrNot = true;
-    //  setTimeout(typeWriter, speedDone);
-    // }
-    
+  } else {
+    document.getElementById("greeting").innerHTML = tempTxt + '<span class="blinking-cursor"></span>';
   }
 }
 
@@ -68,9 +53,60 @@ function blinkCursor() {
 
 }
 
+
+// function moveStars() {
+//   if (true) {
+//     document.getElementById("star1").style.top = parseInt(starLoc, 10) + window.scrollY+ "px";
+//     // console.log(document.getElementById("star1").style.top + window.scrollY);
+//     // console.log(window.scrollY);
+//     setTimeout(moveStars, 100);
+//   }
+  
+// }
+
+
 $(document).ready(function() {
 
- 
+  var stars = document.getElementsByClassName("stars");
+  var starLocs = [];
+  getOrigLocs();
+  var speedsList = [];
+  getSpeeds();
+
+  function setThings() {
+    for (i = 0; i < stars.length; i++) { 
+      stars[i].style.zIndex = "-1";
+      stars[i].style.borderRadius = "50%";
+    }
+  } setThings();
+  function getSpeeds() {
+    // var stars = document.getElementsByClassName("stars");
+    // var speedsList = [];
+    for (i = 0; i < stars.length; i++) { 
+      speedsList.push(Math.floor((Math.random() * 10) + 2));
+
+    }
+    console.log(speedsList);
+  }
+
+  function getOrigLocs() {
+    for (i = 0; i < stars.length; i++) { 
+      starLocs.push(stars[i].style.top);
+    }
+    console.log(starLocs);
+  }
+
+  $(window).scroll(function(){
+    // window.scrollBy(0,1);
+    // scrolldelay = setTimeout(pageScroll,10);
+    // document.getElementById("star1").style.top = parseInt(starLoc, 10) + window.scrollY/15+ "px";
+    // console.log(parseInt(starLoc, 10) + window.scrollY/10);
+    // console.log(window.scrollY);
+    for (i = 0; i < stars.length; i++) { 
+      stars[i].style.top = parseInt(starLocs[i], 10) + window.scrollY/speedsList[i] + "px";
+    }
+  }); 
+
 // jQuery Function Number 1 (click)
   $("#sidebar-button").click(function() {
     // jQuery Function Number 2 (hasClass)
