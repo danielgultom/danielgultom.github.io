@@ -79,6 +79,9 @@ $(document).ready(function() {
     for (i = 0; i < stars.length; i++) { 
       stars[i].style.zIndex = "-1";
       stars[i].style.borderRadius = "50%";
+      stars[i].style.width = "5px";
+      stars[i].style.height = "5px";
+
     }
   } setThings();
   function getSpeeds() {
