@@ -65,7 +65,9 @@ function blinkCursor() {
 // }
 
 
+
 $(document).ready(function() {
+
 
   var stars = document.getElementsByClassName("stars");
   var starLocs = [];
@@ -83,7 +85,7 @@ $(document).ready(function() {
     // var stars = document.getElementsByClassName("stars");
     // var speedsList = [];
     for (i = 0; i < stars.length; i++) { 
-      speedsList.push(Math.floor((Math.random() * 10) + 2));
+      speedsList.push((Math.random() * 10) + 2);
 
     }
     console.log(speedsList);
@@ -214,19 +216,6 @@ $(document).ready(function() {
 
     }
   })
-
-
-
-
-
-
-
-  // for the resume
-
-
-
-  
-
 });
 
 
