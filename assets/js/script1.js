@@ -1,6 +1,6 @@
 var tCount = 0;
 var j = 0;
-var txt = "Welcome to my personal website! It's currently under heavy construction, but I hope you'll understand :) I have plans to make it look really nice soon!";
+var txt = "Welcome to my personal website! It's currently under heavy construction, but I hope you'll understand. I have plans to make it super cool! I began this website from scratch with very little web design experience, so thanks for being patient. I'm currently working on making it more mobile-friendly, so stay tuned for more cool stuff :D";
 var name = "Daniel Gultom"
 var tempName = "";
 var tempTxt = "";
@@ -20,10 +20,16 @@ function nameTyper() {
     setTimeout(nameTyper, speedName);
   } else {
     document.getElementById("daniel").innerHTML = tempName + '<span class="blinking-cursor"></span>';
-    setTimeout(typeWriter, speed);
+    setTimeout(waitForABit, 2000);
     // console.log("banana");
   }
 }
+
+function waitForABit() {
+  document.getElementById("daniel").innerHTML = tempName + '<span class="noborder"></span>';
+  setTimeout(typeWriter, 100)
+}
+
 function typeWriter() {
   if (tCount < txt.length) {
     tempTxt += txt.charAt(tCount);
@@ -79,8 +85,10 @@ $(document).ready(function() {
     for (i = 0; i < stars.length; i++) { 
       stars[i].style.zIndex = "-1";
       stars[i].style.borderRadius = "50%";
-      stars[i].style.width = "5px";
-      stars[i].style.height = "5px";
+      var size = Math.random() * 8 + 2;
+      stars[i].style.width = size + "px";
+      stars[i].style.height = size + "px";
+      // stars[i].style.background = "radial-gradient(white 1%, black 50%)";
 
     }
   } setThings();
@@ -129,7 +137,6 @@ $(document).ready(function() {
       setTimeout(function() {
         $('body').addClass('no-scroll');
       }, 300);
-
     }
 
   })

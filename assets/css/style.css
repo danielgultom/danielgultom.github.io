@@ -2,7 +2,7 @@ body {
 	font-family: 'Raleway', sans-serif;
 	/*font-family: "Comic Sans MS", "Comic Sans", cursive;*/
 	/*background-color: #C0C0C0;*/
-	/*background-color: black;*/
+	background-color: black;
 	/*height: 1500px;
 	background-repeat: no-repeat;
 	background: linear-gradient(black, #fca210);*/
@@ -15,7 +15,13 @@ a {
 	color: white;
 	text-decoration: none;
 }
+.noborder {
+	border: none;
+}
 
+.stars {
+	/*background: radial-gradient(white 1%, black 50%);*/
+}
 #banner {
 	position: absolute;
 	z-index: -5;
@@ -25,7 +31,7 @@ a {
 	margin: 0;
 	padding: 0;*/
 	width: 100%;
-	height: 1500px;
+	height: 3000px;
 	background-repeat: no-repeat;
 	background: linear-gradient(black 40%, #fca210 90%);
 }
