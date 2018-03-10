@@ -69,7 +69,7 @@ function makeStars(numStars) {
   for (i = 0; i < numStars; i++) {
     var starLeft = Math.random() * 90 + 5;
     // var starTop = Math.random() * starfield.style.height * .8 + 100;
-    var starTop = Math.random() * 3000 * .8;
+    var starTop = Math.random() * 3000 * .5;
 
     console.log("bbb" + String(starfield.style.height)+"asdfasdfa");
     // console.log(starTop);
