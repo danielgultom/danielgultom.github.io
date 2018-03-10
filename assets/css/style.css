@@ -1,5 +1,9 @@
 
-/** { border: .1px solid white; }*/
+* { 
+	/*border: .1px solid white; */
+	/*transition: all .5s;
+	transition-timing-function: ease-out;*/
+	}
 body {
 	font-family: 'Raleway', sans-serif;
 	background-color: black;
@@ -28,7 +32,7 @@ a {
 	background-color: white;
 	position: absolute;
 }
-#banner {
+#starfield {
 	position: absolute;
 	z-index: -5;
 	left: 0%;
@@ -57,7 +61,7 @@ a {
 }*/
 #galaxy {
 	font-family: 'Nanum Gothic', sans-serif;
-	width: 60%;
+	width: 55%;
 	margin-left: auto;
 	margin-right: auto;
 	/*background-color: white;*/
@@ -87,10 +91,16 @@ a {
     display: table-cell;
 }
 
-#character {
-	/*position: absolute;*/
-	margin: auto;
-	font-size: 20px;
+#describe {
+	position: absolute;
+	top: 21%;
+	/*margin: auto;*/
+	width: 100%;
+}
+#describeText {
+	text-align: center;
+	font-size: 60px;
+	font-size: 5.5vw;
 }
 /*#hey {
 
@@ -133,13 +143,6 @@ a {
 	background-size: 100px 82px;
 }
 
-/*svg {
-	fill: blue;
-}*/
-.testThing {
-	margin-left: 20%;
-	margin-right: 20%;
-}
 .noblink-cursor {
 	border: 3px solid white;
 }
