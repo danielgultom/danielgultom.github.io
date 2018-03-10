@@ -83,11 +83,13 @@ $(document).ready(function() {
 
   function setThings() {
     for (i = 0; i < stars.length; i++) { 
+      var size = Math.random() * 8 + 2;
       stars[i].style.zIndex = "-1";
       stars[i].style.borderRadius = "50%";
-      var size = Math.random() * 8 + 2;
       stars[i].style.width = size + "px";
       stars[i].style.height = size + "px";
+      var starLeft = Math.random() * 90 + 5;
+      stars[i].style.left = starLeft + "%";
       // stars[i].style.background = "radial-gradient(white 1%, black 50%)";
 
     }

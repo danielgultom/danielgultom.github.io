@@ -1,8 +1,7 @@
 
+/** { border: .1px solid white; }*/
 body {
 	font-family: 'Raleway', sans-serif;
-	/*font-family: "Comic Sans MS", "Comic Sans", cursive;*/
-	/*background-color: #C0C0C0;*/
 	background-color: black;
 	/*height: 1500px;
 	background-repeat: no-repeat;
@@ -24,6 +23,7 @@ a {
 }
 
 .stars {
+	/*uncomment below to make stars fade, with a whiter center and more transparent borders*/
 	/*background: radial-gradient(white 1%, black 50%);*/
 	background-color: white;
 	position: absolute;
@@ -49,40 +49,48 @@ a {
 	z-index: 200;
 
 }
-#welcome {
-	font-size: 200px;
-	text-align: center;
-	letter-spacing: 0px;
-	height: 190px;
-}
-#universe {
+
+/*#universe {
 	font-size: 50px;
 	text-align: center;
 	letter-spacing: 0;
-}
+}*/
 #galaxy {
-	font-size: 100px;
 	font-family: 'Nanum Gothic', sans-serif;
 	width: 60%;
-	left: 21%;
-	position: absolute;
-}
+	margin-left: auto;
+	margin-right: auto;
+	/*background-color: white;*/
+} 
+#galaxyText {
+	/*width: 60%;*/
+	font-size: 100px;
+	font-size: 7vw;
+	/*margin-left: auto;
+	margin-right: auto;*/
+	/*width: 8em;*/
 
-#STARWARS {
-	position: absolute;
-	top: 1300px;
-	left: 5%;
 }
-
+.emptySpace {
+	/*color: white;*/
+	height: 700px;
+}
 #crawl {
-	position: absolute;
-	top: 1430px;
-	width: 99%;
+	margin-left: auto;
+	position: relative;
 }
+#STARWARS {
+	width: 80%;
+	margin-left: auto;
+    margin-right: auto;
+    /*text-align: center;*/
+    display: table-cell;
+}
+
 #character {
-	text-align: center;
-	top: 50%;
-	font-size: 64px;
+	/*position: absolute;*/
+	margin: auto;
+	font-size: 20px;
 }
 /*#hey {
 
@@ -139,7 +147,6 @@ a {
   /*font-weight: 100;*/
   /*font-size: 30px;*/
   /*color: #2E3D48;*/
-  /*border: 3px solid white;*/
   -webkit-animation: 1s blink step-end infinite;
   -moz-animation: 1s blink step-end infinite;
   -ms-animation: 1s blink step-end infinite;
