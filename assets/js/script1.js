@@ -84,15 +84,12 @@ function makeStarDiv(horizInPercent, vertInPixels) {
 
 
 
+///////////////////////////////////////////
+///////////looped section//////////////////
+///////////////////////////////////////////
 $(document).ready(function() {
-  var touchDevice = (navigator.maxTouchPoints || 'ontouchstart' in document.documentElement);
-  console.log("touchDevice: " + touchDevice);
-  if (touchDevice) {
-    makeStars(50);
-  } else {
-    makeStars(20);
-  }
-  // makeStars(50);
+  var numStars = parseInt(.04 * window.innerWidth);
+  makeStars(numStars);
   var stars = document.getElementsByClassName("stars");
   var starLocs = [];
   getOrigLocs();
@@ -111,7 +108,7 @@ $(document).ready(function() {
       // stars[i].style.background = "radial-gradient(white 1%, black 50%)";
 
     }
-  } 
+  }
   
   setThings();
   // makeStars(100);
