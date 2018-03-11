@@ -85,7 +85,14 @@ function makeStarDiv(horizInPercent, vertInPixels) {
 
 
 $(document).ready(function() {
-  makeStars(50);
+  var touchDevice = (navigator.maxTouchPoints || 'ontouchstart' in document.documentElement);
+  console.log("touchDevice: " + touchDevice);
+  if (touchDevice) {
+    makeStars(50);
+  } else {
+    makeStars(20);
+  }
+  // makeStars(50);
   var stars = document.getElementsByClassName("stars");
   var starLocs = [];
   getOrigLocs();
@@ -94,7 +101,7 @@ $(document).ready(function() {
 
   function setThings() {
     for (i = 0; i < stars.length; i++) { 
-      var size = Math.random() * 4;
+      var size = Math.random() * 3 + 1;
       stars[i].style.zIndex = "-1";
       stars[i].style.borderRadius = "50%";
       stars[i].style.width = size + "px";
