@@ -84,40 +84,48 @@ a {
 	position: relative;
 }
 #STARWARS {
-	width: 80%;
+	/*width: 80%;*/
+	width: 100%;
 	margin-left: auto;
     margin-right: auto;
+    max-width: 900px;
+    /*text-align: center;*/
+    display: table-cell;
+}
+
+#starwars_daniel {
+	/*width: 80%;*/
+	width: 100%;
+	margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
+    /*text-align: center;*/
+    display: table-cell;
+}
+#starwars_gultom {
+	/*width: 80%;*/
+	width: 100%;
+	margin-left: auto;
+    margin-right: auto;
+    max-width: 900px;
     /*text-align: center;*/
     display: table-cell;
 }
 
 #describe {
-	position: absolute;
-	top: 21%;
+	/*position: absolute;*/
+	/*top: 21%;*/
 	/*margin: auto;*/
+	margin: 0;
 	width: 100%;
 }
 #describeText {
 	text-align: center;
+	line-height: 0;
 	font-size: 60px;
-	font-size: 5.5vw;
-}
-/*#hey {
-
-	font-size: 200px;
-	text-align: right;
-	margin-left: 0%;
-	top: 0;
+	font-size: 5vw;
 }
 
-#intro {
-	color: #d1e2ff;
-}
-
-#myName {
-	font-size: 75px;
-	display: block;
-}*/
 #daniel {
 	font-size: 75px;
 	display: block;
@@ -126,12 +134,9 @@ a {
 
 
 #greeting {
-	/*position: fixed;
-	top: 500px;*/
-	margin-left: 20%;
-	margin-right: 20%;
-	/*margin-top: -50px;
-	margin-left: -100px;*/
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 646px;
 }
 .front {
 	z-index: 100;
