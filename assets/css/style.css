@@ -44,16 +44,30 @@ a {
 	font-family: 'Nanum Gothic', sans-serif;
 	margin-top: 16%;
 	margin-bottom: 0;
+	/*margin-left: 50%;*/
+	/*width: 1400px;*/
+	width: 90vw;
+	/*max-width: 100%;*/
+	margin-left: auto;
+	margin-right: auto;
+	left: 50px;
 } 
 .galaxyText {
-	/*width: 100%;*/
+	width: 100%;
 	margin-left: auto;
     margin-right: auto;
-    max-width: 545px;
+    /*max-width: 600px;*/
 
-	font-size: 100px;
+	/*font-size: 100px;*/
 	font-size: 2.8vw;
+	font-size: 6vw;
+	/*font-size: 12vmin;*/
+
+	/*font-size: 5em;*/
 	line-height: 0.2;
+	/*padding: auto;*/
+	/*text-align: center;*/
+
 }
 
 .emptySpace {

@@ -6,7 +6,10 @@
 
 var tCount = 0;
 var j = 0;
-var txt = "Welcome to my personal website! It's currently under heavy construction, but I hope you'll understand. I have plans to make it super cool! I began this website from scratch with very little web design experience, so thanks for being patient. I'm currently working on making it more mobile-friendly, so stay tuned for more cool stuff :D";
+var txt = "Welcome to my personal website! It's currently under heavy construction, but I\
+ hope you'll understand. I have plans to make it super cool! I began this website from scratch \
+ with very little web design experience, so thanks for being patient. I'm currently working on \
+ making it more responsive, so stay tuned for more cool stuff :D";
 var name = "Daniel Gultom"
 var tempName = "";
 var tempTxt = "";
