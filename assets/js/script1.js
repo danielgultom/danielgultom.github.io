@@ -27,7 +27,6 @@ function nameTyper() {
   } else {
     document.getElementById("daniel").innerHTML = tempName + '<span class="blinking-cursor"></span>';
     setTimeout(waitForABit, 2000);
-    // console.log("banana");
   }
 }
 
@@ -51,29 +50,20 @@ function typeWriter() {
 function blinkCursor() {
   if (thereOrNot) {
     document.getElementById("greeting").style.borderRight = "solid red";
-    console.log("hello here");
-    // thereOrNot = false;
-    // setTimeout(blinkCursor, speedDone);
+
   } else {
     document.getElementById("greeting").style.borderRight = "";
-    console.log("hello there");
-    // thereOrNot = true;
-    // setTimeout(blinkCursor, speedDone);
-  }
-  thereOrNot = !thereOrNot;
-  setTimeout(blinkCursor, speedDone);
+  }  setTimeout(blinkCursor, speedDone);
 
 }
 function makeStars(numStars) {
   var starfield = document.getElementById("starfield");
   for (i = 0; i < numStars; i++) {
     var starLeft = Math.random() * 90 + 5;
-    // var starTop = Math.random() * starfield.style.height * .8 + 100;
-    var starTop = Math.random() * 3000 * .5;
+    var starTop = Math.random() * starfield.offsetHeight * .8 + 100;
+    // var starTop = Math.random() * 3000 * .5;
 
-    console.log("bbb" + String(starfield.style.height)+"asdfasdfa");
-    // console.log(starTop);
-    // console.log(makeStarDiv(starLeft, starTop));
+    console.log("bbb" + String(starfield.offsetHeight)+"asdfasdfa");
     starfield.innerHTML += makeStarDiv(starLeft, starTop);
   }
 }
@@ -82,59 +72,70 @@ function makeStarDiv(horizInPercent, vertInPixels) {
   return "<div class='stars' style='width:10px;height:10px; left: "+ horizInPercent + "%; top: " + vertInPixels + "px;'></div>";
 }
 
+function whenScrolledToExplanation(){
+  console.log("in here");
+  if(window.pageYOffset >= document.getElementById("greeting").offsetTop){
+    typeWriter();
+  }
+
+}
+
+
+
+
 
 
 ///////////////////////////////////////////
-///////////looped section//////////////////
+///////////looped section?//////////////////
 ///////////////////////////////////////////
-$(document).ready(function() {
-  var numStars = parseInt(.04 * window.innerWidth);
-  makeStars(numStars);
-  var stars = document.getElementsByClassName("stars");
-  var starLocs = [];
-  getOrigLocs();
-  var speedsList = [];
-  getSpeeds();
+// $(document).ready(function() {
+//   // window.onscroll=whenScrolledToExplanation();
+//   var numStars = parseInt(.04 * window.innerWidth);
+//   makeStars(numStars);
+//   var stars = document.getElementsByClassName("stars");
+//   var starLocs = [];
+//   getOrigLocs();
+//   var speedsList = [];
+//   getSpeeds();
 
-  function setThings() {
-    for (i = 0; i < stars.length; i++) { 
-      var size = Math.random() * 3 + 1;
-      stars[i].style.zIndex = "-1";
-      stars[i].style.borderRadius = "50%";
-      stars[i].style.width = size + "px";
-      stars[i].style.height = size + "px";
-      var starLeft = Math.random() * 90 + 5;
-      stars[i].style.left = starLeft + "%";
-      // stars[i].style.background = "radial-gradient(white 1%, black 50%)";
+//   function setThings() {
+//     for (i = 0; i < stars.length; i++) { 
+//       var size = Math.random() * 3 + 1;
+//       stars[i].style.zIndex = "-1";
+//       stars[i].style.borderRadius = "50%";
+//       stars[i].style.width = size + "px";
+//       stars[i].style.height = size + "px";
+//       var starLeft = Math.random() * 90 + 5;
+//       stars[i].style.left = starLeft + "%";
+//       // stars[i].style.background = "radial-gradient(white 1%, black 50%)";
 
-    }
-  }
+//     }
+//   }
   
-  setThings();
-  // makeStars(100);
-  function getSpeeds() {
-    // var stars = document.getElementsByClassName("stars");
-    // var speedsList = [];
-    for (i = 0; i < stars.length; i++) { 
-      speedsList.push((Math.random() * 1) + 2);
+//   setThings();
+//   // makeStars(100);
+//   function getSpeeds() {
+//     // var stars = document.getElementsByClassName("stars");
+//     // var speedsList = [];
+//     for (i = 0; i < stars.length; i++) { 
+//       speedsList.push((Math.random() * 1) + 2);
 
-    }
-    // console.log(speedsList);
-  }
+//     }
+//   }
   
-  function getOrigLocs() {
-    for (i = 0; i < stars.length; i++) { 
-      starLocs.push(stars[i].style.top);
-    }
-  }
+//   function getOrigLocs() {
+//     for (i = 0; i < stars.length; i++) { 
+//       starLocs.push(stars[i].style.top);
+//     }
+//   }
 
-  $(window).scroll(function(){
-    for (i = 0; i < stars.length; i++) { 
-      stars[i].style.top = parseInt(starLocs[i], 10) + window.scrollY/speedsList[i] + "px";
-    }
-  }); 
+//   $(window).scroll(function(){
+//     for (i = 0; i < stars.length; i++) { 
+//       stars[i].style.top = parseInt(starLocs[i], 10) + window.scrollY/speedsList[i] + "px";
+//     }
+//   }); 
 
-});
+// });
 
 
 

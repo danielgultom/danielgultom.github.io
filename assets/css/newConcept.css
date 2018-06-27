@@ -1,0 +1,30 @@
+* {
+	border: .5px solid white;
+	color: white;
+}
+
+body {
+	background-image: url("../img/nyan.gif");
+	background-repeat: no-repeat;
+	background-size: 100%;
+}
+
+#name {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+	font-size: 100px;
+}
+
+.info_bar {
+	/*display: inline-block;*/
+	/*float: left;*/
+	width: 100%;
+	/*align-items: center;*/
+	margin: auto;
+	background-color: black;
+}
+
+.info_elem {
+	width: 30%;
+	float: left;
+}
+
