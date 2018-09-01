@@ -130,6 +130,14 @@ a {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 646px;
+
+	/*transform: perspective(400px) rotateX(30deg);*/
+	/*transform-origin: 50% 100%;
+	text-align: justify;
+	position: absolute;
+	height: 100em;
+	width: 1000px;*/
+
 }
 
 
