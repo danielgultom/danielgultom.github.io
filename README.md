@@ -8,6 +8,6 @@ skills in programming through projects and share personal content.
 
 I'm only a sophomore so I'm still exploring what I like in the field of computer 
 science, but I'm currently interested in web design/development, UI/UX, 
-software engineering, and data science, and I'm definitely looking for 
-opportunities to gain skills in those industries through internships/jobs. Please 
-message me at daniel.gultom@berkeley.edu for any questions!
+software engineering, and data science. I'm definitely looking for 
+opportunities to gain skills in those industries through internships/jobs, so please 
+message me at daniel.gultom@berkeley.edu to get in touch!
