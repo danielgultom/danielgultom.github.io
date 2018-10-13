@@ -87,22 +87,19 @@ a {
     display: table-cell;
 }
 
-#starwars_daniel {
+.name_elem {
 	/*width: 80%;*/
 	width: 100%;
 	margin-left: auto;
     margin-right: auto;
     max-width: 900px;
-    display: table-cell;
+    display: block;
+}
+#starwars_daniel {
+
 }
 #starwars_gultom {
-	/*width: 80%;*/
-	width: 100%;
-	margin-left: auto;
-    margin-right: auto;
-    max-width: 900px;
-    /*text-align: center;*/
-    display: table-cell;
+
 }
 
 #describe {
